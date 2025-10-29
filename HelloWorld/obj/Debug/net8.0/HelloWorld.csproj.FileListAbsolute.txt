@@ -1,0 +1,14 @@
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/bin/Debug/net8.0/HelloWorld
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/bin/Debug/net8.0/HelloWorld.deps.json
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/bin/Debug/net8.0/HelloWorld.runtimeconfig.json
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/bin/Debug/net8.0/HelloWorld.dll
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/bin/Debug/net8.0/HelloWorld.pdb
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.AssemblyInfoInputs.cache
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.AssemblyInfo.cs
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.csproj.CoreCompileInputs.cache
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.dll
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/refint/HelloWorld.dll
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.pdb
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.genruntimeconfig.cache
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/ref/HelloWorld.dll
