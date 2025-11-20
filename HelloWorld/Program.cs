@@ -1,57 +1,63 @@
-﻿internal class Program
+﻿using System;
+
+class Program
 {
-    private static void Main(string[] args)
+    static void Main()
     {
+        // Point d'entrée du programme : appelle la méthode qui lance le jeu
+        QuickMath();
+    }
+
+    static void QuickMath()
+    {
+        // score : compteur de bonnes réponses
+        int score = 0;
+
+        // Générateur de nombres aléatoires pour créer les questions
         Random random = new Random();
-        int nombreMystere = random.Next(1, 10);
-        int nombreEssaisJoueur1 = 0;
-        int nombreEssaisJoueur2 = 0;
-        bool joueur1ATrouve = false;
-        bool joueur2ATrouve = false;
 
-        Console.WriteLine("Bienvenue dans le jeu de plus ou moins multijoueur ! Devinez le nombre entre 1 et 100.");
-
-        while (!joueur1ATrouve && !joueur2ATrouve)
+        // Boucle principale : 5 questions
+        for (int i = 0; i < 5; i++)
         {
-            // Tour du joueur 1
-            Console.Write("Joueur 1, entrez votre nombre : ");
-            int nombreUtilisateur1 = Convert.ToInt32(Console.ReadLine());
-            nombreEssaisJoueur1++;
+            // Génère deux entiers entre 1 et 10 (inclus)
+            int a = random.Next(1, 11); // Entre 1 et 10 inclus
+            int b = random.Next(1, 11);
 
-            if (nombreUtilisateur1 < nombreMystere)
+            // Pose la question à l'utilisateur
+            Console.Write($"Combien fait {a} + {b} ? ");
+
+            // Démarre le chronomètre afin de mesurer le temps de réponse
+            DateTime startTime = DateTime.Now;
+
+            // Lecture et validation de l'entrée utilisateur
+            // TryParse renvoie false si l'entrée n'est pas un entier valide
+            int answer;
+            while (!int.TryParse(Console.ReadLine(), out answer))
             {
-                Console.WriteLine("C'est plus !");
+                // Demande à l'utilisateur de saisir à nouveau si l'entrée est invalide
+                Console.Write("Veuillez entrer un nombre valide : ");
             }
-            else if (nombreUtilisateur1 > nombreMystere)
+
+            // Calcule le temps écoulé depuis l'affichage de la question
+            TimeSpan elapsedTime = DateTime.Now - startTime;
+
+            // Vérifie la réponse et affiche un feedback immédiat
+            if (answer == a + b)
             {
-                Console.WriteLine("C'est moins !");
+                score++; // bonne réponse -> incrémente le score
+                Console.WriteLine("Correct !");
             }
             else
             {
-                joueur1ATrouve = true;
-                Console.WriteLine($"Bravo Joueur 1 ! Vous avez trouvé le nombre mystère en {nombreEssaisJoueur1} essais.");
-                break;
+                // Affiche la bonne réponse si l'utilisateur s'est trompé
+                Console.WriteLine($"Faux ! La bonne réponse était {a + b} ");
             }
 
-            // Tour du joueur 2
-            Console.Write("Joueur 2, entrez votre nombre : ");
-            int nombreUtilisateur2 = Convert.ToInt32(Console.ReadLine());
-            nombreEssaisJoueur2++;
-
-            if (nombreUtilisateur2 < nombreMystere)
-            {
-                Console.WriteLine("C'est plus !");
-            }
-            else if (nombreUtilisateur2 > nombreMystere)
-            {
-                Console.WriteLine("C'est moins !");
-            }
-            else
-            {
-                joueur2ATrouve = true;
-                Console.WriteLine($"Bravo Joueur 2 ! Vous avez trouvé le nombre mystère en {nombreEssaisJoueur2} essais.");
-                break;
-            }
+            // Affiche le temps mis pour répondre (en secondes, 2 décimales)
+            Console.WriteLine($"Temps : {elapsedTime.TotalSeconds:F2} secondes");
         }
+
+        // Résumé final du score après les 5 questions
+        Console.WriteLine($"Votre score : {score}/5");
     }
 }

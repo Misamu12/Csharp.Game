@@ -12,3 +12,4 @@
 /home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.pdb
 /home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.genruntimeconfig.cache
 /home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/ref/HelloWorld.dll
+/home/pikachu/Documents/patrick/C_sharp_First/HelloWorld/obj/Debug/net8.0/HelloWorld.sourcelink.json
