@@ -1,9 +1,6 @@
 # Csharp.Game
 # Csharp.Game PTX
 
-
-Voici une analyse détaillée de ton code C# qui implémente un petit jeu de calcul mental :
-
 ---
 
 ### **Structure générale**
