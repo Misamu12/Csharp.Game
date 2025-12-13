@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        // Point d'entrée du programme : appelle la méthode qui lance le jeu
+        // la méthode qui lance le jeu
         QuickMath();
     }
 
@@ -16,40 +16,39 @@ class Program
         // Générateur de nombres aléatoires pour créer les questions
         Random random = new Random();
 
-        // Boucle principale : 5 questions
+        // Boucle principale pose 5 questions
         for (int i = 0; i < 5; i++)
         {
-            // Génère deux entiers entre 1 et 10 (inclus)
+            // Génère deux entiers entre 1 et 10
             int a = random.Next(1, 11); // Entre 1 et 10 inclus
             int b = random.Next(1, 11);
 
-            // Pose la question à l'utilisateur
+            
             Console.Write($"Combien fait {a} + {b} ? ");
 
             // Démarre le chronomètre afin de mesurer le temps de réponse
-            DateTime startTime = DateTime.Now;
+            DateTime startTime = DateTime.Now; // A checker !!!
 
-            // Lecture et validation de l'entrée utilisateur
             // TryParse renvoie false si l'entrée n'est pas un entier valide
             int answer;
             while (!int.TryParse(Console.ReadLine(), out answer))
             {
-                // Demande à l'utilisateur de saisir à nouveau si l'entrée est invalide
+                // Demande à user de saisir a nouveau si c est pas la bonne response
                 Console.Write("Veuillez entrer un nombre valide : ");
             }
 
-            // Calcule le temps écoulé depuis l'affichage de la question
+            // Calcule le temps écoulé depuis l affichage de la question
             TimeSpan elapsedTime = DateTime.Now - startTime;
 
             // Vérifie la réponse et affiche un feedback immédiat
             if (answer == a + b)
             {
-                score++; // bonne réponse -> incrémente le score
+                score++;
                 Console.WriteLine("Correct !");
             }
             else
             {
-                // Affiche la bonne réponse si l'utilisateur s'est trompé
+               
                 Console.WriteLine($"Faux ! La bonne réponse était {a + b} ");
             }
 
@@ -57,7 +56,7 @@ class Program
             Console.WriteLine($"Temps : {elapsedTime.TotalSeconds:F2} secondes");
         }
 
-        // Résumé final du score après les 5 questions
+       
         Console.WriteLine($"Votre score : {score}/5");
     }
 }
